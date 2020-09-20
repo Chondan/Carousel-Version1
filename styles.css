@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+div.figure-container {
+    width: 60%;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px black;
+    display: flex;
+    flex-direction: column;
+}
+figure {
+    width: 500%;
+    transition: transform 1s;
+    /* animation: slidy 5s infinite; */
+}
+img {
+    width: 20%;
+    float: left;
+}
+div.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+div.button-container button {
+    cursor: pointer;
+    width: 50%;
+    height: 50px;
+}
+header {
+    text-align: center;
+    margin: 20px;
+}
+@keyframes slidy {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-20%); }
+    50% { transform: translateX(-40%); }
+    75% { transform: translateX(-60%); }
+    100% { transform: translateX(-80%); }
+}
